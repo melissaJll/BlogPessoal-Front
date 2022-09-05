@@ -16,7 +16,7 @@ return (
             <Grid item xs={12} sm={12}>
                 <Box padding={15} >
                     <Typography variant='h4' gutterBottom color='textPrimary' component='h4' align='center' style={{fontWeight: 'bold'}} >Sobre Nós</Typography>
-                    <Typography  align='center'>Este foi um projeto desenvolvido pelos alunos do bootcamp Generation Brasil com o intuito de colaborar com regiões 
+                    <Typography  align='center'>Este  , foi um projeto desenvolvido pelos alunos do bootcamp Generation Brasil com o intuito de colaborar com regiões 
                         geograficamente vulneráveis, tais como as que carecem de recursos básicos ou que se encontram em situação bélica, 
                         e esse suporte, por parte dos usuários, poderá ocorrer através de doações e compartilhamento de informações
                     </Typography>
