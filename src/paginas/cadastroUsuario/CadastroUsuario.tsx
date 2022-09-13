@@ -10,6 +10,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import User from "../../models/User";
 import { cadastroUsuario } from "../../services/Service";
 import "./CadastroUsuario.css";
+import { toast } from "react-toastify";
 
 function CadastroUsuario() {
   const useStyles = makeStyles((theme) => ({
@@ -57,52 +58,67 @@ function CadastroUsuario() {
   }
   async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault();
-    // Estrutura Condicional que verifica se as senhas batem e se a Senha tem mais de 8 caracteres
+    // Senha igual e Senha tem mais de 8 caracteres
     if (confirmarSenha === user.senha && user.senha.length >= 8) {
-      //Tenta executar o cadastro
+      //Tenta o cadastro
       try {
         await cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult);
-        alert("Usuário cadastrado com sucesso");
+        toast.success('Usuário cadastrado com sucesso', {
+          position: "bottom-right",
+          autoClose: 4000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          });
 
         //Se houver erro, pegue o Erro e retorna uma msg
       } catch (error) {
         console.log(`Error: ${error}`);
 
         //Pode modificar a msg de acordo com o erro
-        alert("Usuário já existente");
+        toast.error('Usuário já existente!', {
+          position: "bottom-right",
+          autoClose: 4000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          });
       }
     } else {
-      alert("Insira no miníno 8 caracteres na senha."); // Mensagem que indica a quantidade minima de caracteres
+      toast.error('A quantidade minima de caracteres é 8', {
+        position: "bottom-right",
+        autoClose: 4000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        });
 
       setUser({ ...user, senha: "" }); // Reinicia o campo de Senha
       setConfirmarSenha(""); // Reinicia o campo de Confirmar Senha
     }
   }
   return (
-    <Grid
-      style={{ background: "white" }}
-      container
-      direction="row"
-      justifyContent="center"
-      alignItems="center"
-    >
-      <Grid item xs={6} className="imagem2"></Grid>
-      <Grid item xs={6} alignItems="center">
-        <Box paddingX={10}>
+    <Grid container direction='row' justifyContent='center' alignItems='center'>
+            <Grid item xs={6} className='imagem2'></Grid>
+            <Grid item xs={6} alignItems='center'>
+                <Box paddingX={10}>
           <form onSubmit={onSubmit}>
-            <div className="icon">
-              <Avatar className={classes.avatar}>
-                <LockOutlinedIcon />
-              </Avatar>
-            </div>
             <Typography
               variant="h4"
               gutterBottom
               color="textPrimary"
               component="h4"
               align="center"
-              className="textos2"
-            >
+              className="textos2">
               Cadastrar-se
             </Typography>
             <TextField

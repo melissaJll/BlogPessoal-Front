@@ -7,6 +7,7 @@ import { buscaId, post, put } from "../../../services/Service";
 import { Box } from "@mui/material";
 import { useSelector } from "react-redux";
 import { TokenState } from "../../../store/tokens/tokensReducer";
+import { toast } from "react-toastify";
 
 function CadastroTema() {
   let navigate = useNavigate();
@@ -21,7 +22,16 @@ function CadastroTema() {
 
   useEffect(() => {
     if (token == "") {
-      alert("Você precisa estar logado");
+      toast.warn('Você precisa estar logado!', {
+        position: "bottom-right",
+        autoClose: 4000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        });
       navigate("/login");
     }
   }, [token]);
@@ -60,13 +70,31 @@ function CadastroTema() {
             Authorization: token,
           },
         });
-
-        alert("Tema atualizado com sucesso");
+        toast.success('Tema atualizado com sucesso', {
+          position: "bottom-right",
+          autoClose: 4000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          });
 
         // CATCH: Caso tenha algum erro, pegue esse erro e mande uma msg para o usuário
       } catch (error) {
         console.log(`Error: ${error}`);
-        alert("Erro, por favor verifique a quantidade minima de caracteres");
+        toast.error('Verifique a quantidade minima de caracteres', {
+          position: "bottom-right",
+          autoClose: 4000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          });
+          
       }
 
       // Se o ID for indefinido, tente Cadastrar
@@ -79,12 +107,30 @@ function CadastroTema() {
           },
         });
 
-        alert("Tema cadastrado com sucesso");
+        toast.success('Tema cadastrado com sucesso', {
+          position: "bottom-right",
+          autoClose: 4000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          });
 
         // CATCH: Caso tenha algum erro, pegue esse erro e mande uma msg para o usuário
       } catch (error) {
         console.log(`Error: ${error}`);
-        alert("Erro, por favor verifique a quantidade minima de caracteres");
+        toast.error('Verifique a quantidade minima de caracteres', {
+          position: "bottom-right",
+          autoClose: 4000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          });
       }
     }
     back();
