@@ -1,5 +1,6 @@
 .caixa{
-    background-color: #3F51B5;
+   background: rgb(26,25,51);
+   background: linear-gradient(71deg, rgba(26,25,51,1) 32%, rgba(25,36,97,1) 71%, rgba(29,36,102,1) 72%, rgba(137,40,255,1) 100%);
 }
 
 .titulo{

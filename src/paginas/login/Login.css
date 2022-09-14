@@ -15,7 +15,8 @@
      text-decoration: none;
  }
  .login{
-    background-color: rgb(96, 96, 119) !important;
+    background: rgb(26,25,51)!important;
+    background: linear-gradient(71deg, rgba(26,25,51,1) 53%, rgba(25,36,97,1) 76%, rgba(139,109,245,1) 100%)!important;
  }
  .button{
     color:rgb(14, 14, 56) !important;
