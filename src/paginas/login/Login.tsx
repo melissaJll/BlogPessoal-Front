@@ -9,6 +9,7 @@ import { Https, Person } from "@material-ui/icons";
 import { useDispatch } from "react-redux";
 import { addToken } from "../../store/tokens/actions";
 import { toast } from "react-toastify";
+import Astro from "../login/ImgLogin/Astro0.png";
 
 function Login() {
 
@@ -68,15 +69,18 @@ function Login() {
   }
 
   return (
-    <Grid container direction='row' justifyContent='center' alignItems='center'>
-        <Grid alignItems='center' xs={6}>
+    <Grid container direction='row' justifyContent='center' alignItems='center' className="login">
+        <Grid xs={6} >
+          <img src={Astro} alt="" className="imagem"/>
+        </Grid>
+        <Grid alignItems='center' xs={6} >
             <Box paddingX={20}>
                 <form onSubmit={onSubmit}>
                     <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='textos1'>Entrar</Typography>
                     <TextField value={userLogin.usuario} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='usuário' variant='outlined' name='usuario' margin='normal' fullWidth />
                     <TextField value={userLogin.senha} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='senha' variant='outlined' name='senha' margin='normal' type='password'fullWidth />
                     <Box marginTop={2} textAlign='center'>
-                            <Button type='submit' variant='contained' color='primary'>
+                            <Button type='submit' variant='contained' className="button">
                                 Logar
                             </Button>
                     </Box>
@@ -91,9 +95,6 @@ function Login() {
                         
                 </Box>
             </Box>
-        </Grid>
-        <Grid xs={6} className='imagem'>
-
         </Grid>
     </Grid>
 );

@@ -60,7 +60,7 @@ function CadastroUsuario() {
     e.preventDefault();
     // Senha igual e Senha tem mais de 8 caracteres
     if (confirmarSenha === user.senha && user.senha.length >= 8) {
-      //Tenta o cadastro
+      // cadastro
       try {
         await cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult);
         toast.success('Usuário cadastrado com sucesso', {
@@ -74,7 +74,7 @@ function CadastroUsuario() {
           theme: "colored",
           });
 
-        //Se houver erro, pegue o Erro e retorna uma msg
+        //retorna uma mensagem em caso de erro
       } catch (error) {
         console.log(`Error: ${error}`);
 
