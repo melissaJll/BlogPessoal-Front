@@ -6,3 +6,7 @@
 .text-decorator-none{
     text-decoration: none;
 }
+.MuiAppBar-colorPrimary {
+    background-color: #6b96be !important;
+    box-shadow: none!important;
+}
