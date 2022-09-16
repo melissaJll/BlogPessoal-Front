@@ -14,9 +14,9 @@ import DeletarPostagem from './componentes/postagens/deletarPostagem/DeletarPost
 import DeletarTema from './componentes/temas/deletarTema/DeletarTema';
 import { Provider } from 'react-redux';
 import store from './store/store';
-import SobreNos from './paginas/sobrenos/SobreNos';
 import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Home2 from './paginas/Home2/Home2';
 
 
 function App() {
@@ -43,8 +43,8 @@ function App() {
             <Route path="/login" element={<Login />} />
 
             <Route path="/home" element={<Home />} />
-            
-            <Route path="/sobrenos" element={<SobreNos />} />
+
+            <Route path="/home2" element={<Home2 />} />
 
             <Route path="/cadastrousuario" element={<CadastroUsuario />} />
 
