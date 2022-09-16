@@ -9,7 +9,7 @@ import { Https, Person } from "@material-ui/icons";
 import { useDispatch } from "react-redux";
 import { addToken } from "../../store/tokens/actions";
 import { toast } from "react-toastify";
-import Astro from "../login/ImgLogin/Astro0.png";
+import Astro from "../login/ImgLogin/Astro.png";
 
 function Login() {
 
@@ -73,7 +73,7 @@ function Login() {
         <Grid xs={6} >
           <img src={Astro} alt="" className="imagem"/>
         </Grid>
-        <Grid alignItems='center' xs={6} >
+        <Grid alignItems='center' xs={6}>
             <Box paddingX={20}>
                 <form onSubmit={onSubmit}>
                     <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='textos1'>Entrar</Typography>

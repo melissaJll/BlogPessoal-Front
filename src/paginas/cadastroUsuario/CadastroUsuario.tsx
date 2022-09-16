@@ -3,14 +3,13 @@ import { useNavigate } from "react-router-dom";
 import { Grid, Typography, Button, TextField } from "@material-ui/core";
 import { Box } from "@mui/material";
 import { Link } from "react-router-dom";
-import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
-import Avatar from "@material-ui/core/Avatar";
 import { makeStyles } from "@material-ui/core/styles";
 
 import User from "../../models/User";
 import { cadastroUsuario } from "../../services/Service";
 import "./CadastroUsuario.css";
 import { toast } from "react-toastify";
+import Astro from "../cadastroUsuario/ImgCadastro/Astro.png";
 
 function CadastroUsuario() {
   const useStyles = makeStyles((theme) => ({
@@ -107,8 +106,10 @@ function CadastroUsuario() {
     }
   }
   return (
-    <Grid container direction='row' justifyContent='center' alignItems='center'>
-            <Grid item xs={6} className='imagem2'></Grid>
+    <Grid container direction='row' justifyContent='center' alignItems='center' className="cadUsuario">
+            <Grid xs={6} >
+              <img src={Astro} alt="" className="imagem2"/>
+            </Grid>
             <Grid item xs={6} alignItems='center'>
                 <Box paddingX={10}>
           <form onSubmit={onSubmit}>

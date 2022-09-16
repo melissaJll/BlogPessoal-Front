@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo+Play&display=swap');
+
 .textos1{
     font-weight: bold !important;
+    font-family: 'Cairo Play', cursive!important;
+    font-weight: bolder!important;
+    color: rgb(221, 221, 221) !important;
  }
  
  .imagem{
@@ -15,10 +20,14 @@
      text-decoration: none;
  }
  .login{
-    background: rgb(26,25,51)!important;
-    background: linear-gradient(71deg, rgba(26,25,51,1) 53%, rgba(25,36,97,1) 76%, rgba(139,109,245,1) 100%)!important;
- }
+   background: rgba(137,40,255,1);
+   background: linear-gradient(79deg, rgba(24,27,38,1) 58%, rgba(25,36,97,1) 75%, rgba(29,36,102,1) 77%, rgba(137,40,255,1) 100%);
+}
  .button{
-    color:rgb(14, 14, 56) !important;
+    color:rgb(245, 242, 248) !important;
+    background: rgb(70,3,153);
+    background: radial-gradient(circle, rgba(70,3,153,1) 29%, rgba(36,30,101,1) 77%);
+    font-family: 'Cairo Play', cursive;
+    font-weight: bolder;
  }
 
