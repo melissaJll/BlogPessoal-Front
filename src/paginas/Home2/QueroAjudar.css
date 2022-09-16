@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+.colorLight{
+    background-color: #F6EEEE;
+}
+.colorWhite{
+    background-color: #ffffff;
+}
+.fntWork{
+    font-family: 'Work Sans', sans-serif !important;
+}
+.padding15{
+    padding-top: 15;
+}

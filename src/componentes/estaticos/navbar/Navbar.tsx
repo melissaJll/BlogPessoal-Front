@@ -50,6 +50,13 @@ function Navbar() {
                         </Typography>
                     </Box>
                 </Link>
+                <Link to="/home2" className="text-decorator-none">
+                    <Box mx={1} className='cursor'>
+                        <Typography variant="h6" color="inherit">
+                            home2
+                        </Typography>
+                    </Box>
+                </Link>
                 <Link to="/posts" className="text-decorator-none">
                     <Box mx={1} className='cursor'>
                         <Typography variant="h6" color="inherit">
