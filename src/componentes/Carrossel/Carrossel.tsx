@@ -11,9 +11,10 @@ import { Pagination, Navigation } from "swiper";
 function Carrossel() {
 
     var items = [
-        { img: "https://imgur.com/a/JpLDwD9" },
-        { img: "https://static.poder360.com.br/2022/04/acampamento-terra-livre-marcelo-camargo-agencia-brasil--848x477.jpeg" },
-        { img: "https://observatorio3setor.org.br/wp-content/uploads/2019/08/voluntariado.jpg" }
+        { img: "https://cdn.discordapp.com/attachments/1020449442861699127/1020502360474267669/unh.png" },
+        { img: "https://cdn.discordapp.com/attachments/1020449442861699127/1020503528550170774/tamoJunta.png" },
+        { img: "https://cdn.discordapp.com/attachments/1020449442861699127/1020503072667086928/africa.png" },
+        { img: "https://cdn.discordapp.com/attachments/1020449442861699127/1020468726916722749/Group_1.png" }
     ]
 
     return (

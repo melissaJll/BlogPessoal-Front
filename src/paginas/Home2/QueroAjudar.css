@@ -1,14 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
 
 .colorLight{
-    background-color: #F6EEEE;
+    background-color: #f8eded;
 }
 .colorWhite{
     background-color: #ffffff;
 }
 .fntWork{
     font-family: 'Work Sans', sans-serif !important;
+    font-size: 20px !important;
 }
 .padding15{
     padding-top: 15;
+}
+.bold{
+    font-size: 20px !important;
+    font-weight: bold !important;
+    text-decoration: none;
 }
