@@ -49,8 +49,8 @@ function Home() {
                         </Link>
                     </Box>
                 </Grid>
-                <Grid item xs={6} >
-                    <img src="https://i.imgur.com/H88yIo2.png" alt="" width="500px" height="500px" />
+                <Grid item xs={6} className="padd25">
+                    <img src="https://cdn.discordapp.com/attachments/1020449442861699127/1020580585472790638/pice.png" alt=""/>
                 </Grid>
                 <Grid xs={12} className='postagens'>
                     <TabPostagem />
